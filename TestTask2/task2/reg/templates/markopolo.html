@@ -1,0 +1,18 @@
+{% extends "reg/default.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+{% for k,v in var.iteritems %}
+    {{ k }}:{{ v }}
+{% endfor %}
+<html>
+<br>
+<br>
+<br>
+<br>
+<br>
+    {% crispy form %}
+    {#{{ form.non_field_errors }}#}
+    {#{{ field.errors }}#}
+
+{% endblock content %}
+</html>
